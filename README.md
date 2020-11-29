@@ -2,4 +2,4 @@
 
 This project is to scrape the web sources with information about jobs, store them in a database and display it on a customized web site.
 
-![Sample Video](img/recording.mp4)
+![Sample Video](img/movie.mp4)
