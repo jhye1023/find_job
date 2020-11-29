@@ -15,7 +15,7 @@ def aggregate_jobs(param):
     return jobs
 
 def save_to_file(jobs, param):
-    file = open(f"csvs/{param}.csv", mode="w")
+    file = open(f"csv/{param}.csv", mode="w")
     writer = csv.writer(file)
     writer.writerow(["Title", "Company", "Location", "Link"])
 
