@@ -3,31 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Results</title>
+    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 <body>
-    <h1>Search Results</h1>
-    <style>
-        section {
-            display: grid;
-            gap:20px;
-            grid-template-columns: repeat(4, 1fr);
-        }
-
-    </style>
+    <h2>Search Results</h2>
     <h3>Found {{number_of_jobs}} results for: {{param}} </h3>
-    <section>
-        <h4>Title</h4>
-        <h4>Company</h4>
-        <h4>Location</h4>
-        <h4>Link</h4>
+
+      <div>
+      <a class="icon" href="/" >
+		<i class="fas fa-home"></i>
+        </a>
+        <a class="icon" href="/export?param={{param}}" style="padding-right: 0.4em;">
+          <i class="fas fa-file"></i>
+        </a>
+    </div>
+   
+    <table id="job_table">
+        <tr>     
+        <th>Title</th>
+        <th>Company</th>
+        <th>Location</th>
+        <th>Link</th>
+    </tr>
         {% for job in jobs %}
-        <span>{{job.title}}</span>
-        <span>{{job.company}}</span>
-        <span>{{job.location}}</span>
-        <a href="{{job.link}}" target="_blank">Apply</a>
+        <tr>
+        <td>{{job.title}}</td>
+        <td>{{job.company}}</td>
+        <td>{{job.location}}</td>
+        <td><a href="{{job.link}}" target="_blank">Apply</a></td>
+    </tr>
         {% endfor %}
 
-    </section>
+    </table>
 </body>
 </html>

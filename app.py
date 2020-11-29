@@ -38,7 +38,7 @@ def export():
         save_to_file(jobs, param)
 
         return send_file(
-            f"csvs/{param}.csv",
+            f"csv/{param}.csv",
             as_attachment=True,
             attachment_filename=f"{param}.csv",
             cache_timeout=0)
