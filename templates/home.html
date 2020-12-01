@@ -7,13 +7,19 @@
     <link rel="stylesheet" href="../static/styles.css">
 </head>
 <body>
-    <img src="https://st2.depositphotos.com/3591429/7157/i/600/depositphotos_71571591-stock-photo-job-search-qualification-concept.jpg">
-    <h1>Are you looking for a new job?</h1>
-    <form action="/report" method="get">
-        <input placeholder= 'python' required name = 'param'/><button>Search</button>
-        
-        <!-- <input type="text" class="form__input" id="name" placeholder="Full name" required="param" /> -->
-    </form>
+    <main>
+		<div style="height: 10vh;"></div>
+		<div id="label">Job Search</div>
+		<div id="box">
+    <img src="https://cdn.shopify.com/s/files/1/1690/2655/files/bornhotelier-job_search_large.png?v=1499313263">
+    <form action="/report">
+        <input type="text" name="param" >
+        <button type="submit">Find my jobs</button>
+      </form>
+  
+      </div>
+     
+    </main>
     
 </body>
 </html>
